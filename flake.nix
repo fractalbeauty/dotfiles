@@ -33,7 +33,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.hazel.imports = [ ./home/profiles/vm.nix ];
+            home-manager.users.hazel.imports = [ ./home/hosts/${name}.nix ];
           }
         ] ++ (cfg.modules or []);
       };
