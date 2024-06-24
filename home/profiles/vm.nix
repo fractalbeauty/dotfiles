@@ -5,6 +5,7 @@
     ../river/river.nix
     ../foot.nix
     ../zsh.nix
+    ../nvim.nix
     ../utils.nix
   ];
 

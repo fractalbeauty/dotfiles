@@ -8,13 +8,17 @@
     # home-manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # nixvim
+    nixvim.url = "github:nix-community/nixvim/nixos-24.05";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager,  ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, ... }:
     let
       mkSystem = name: cfg: nixpkgs.lib.nixosSystem {
         system = cfg.system or "x86_64-linux";
-        specialArgs = inputs;
+        #specialArgs = inputs;
         modules = [
           # shared configuration for all hosts 
           {
@@ -23,22 +27,20 @@
           }
 
           ./hosts/${name}
-        ]
-          ++ (cfg.modules or [])
-          ++ (nixpkgs.lib.optionals (cfg.home-manager) [
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.hazel = import ./home/profiles/vm.nix;
-            }
-          ]);
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.hazel.imports = [ ./home/profiles/vm.nix ];
+          }
+        ] ++ (cfg.modules or []);
       };
 
       systems = {
         vm = {
           modules = [];
-          home-manager = true;
         };
       };
     in {
