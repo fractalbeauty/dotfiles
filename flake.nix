@@ -10,12 +10,15 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # stylix
+    stylix.url = "github:danth/stylix";
+
     # nixvim
     nixvim.url = "github:nix-community/nixvim/nixos-24.05";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, nixvim, ... }:
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, nixvim, ... }:
     let
       overlay-unstable = system: final: prev: {
         unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
@@ -40,7 +43,15 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.hazel.imports = [ ./home/hosts/${name}.nix ];
+            home-manager.users.hazel.imports = [
+              {
+                programs.home-manager.enable = true;
+              }
+
+              stylix.homeManagerModules.stylix
+
+              ./home/hosts/${name}.nix
+            ];
           }
         ] ++ (cfg.modules or []);
       };

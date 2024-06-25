@@ -51,6 +51,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
   #   wget
+    dconf
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -86,17 +87,6 @@
   users.users.hazel = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-  };
-
-  # fonts
-  fonts = {
-    packages = with pkgs; [
-      inconsolata
-    ];
-
-    fontconfig.defaultFonts = {
-      monospace = ["Inconsolata"];
-    };
   };
 }
 
