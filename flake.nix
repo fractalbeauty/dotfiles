@@ -4,6 +4,7 @@
   inputs = {
     # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # home-manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
@@ -14,12 +15,18 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, ... }:
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, nixvim, ... }:
     let
-      mkSystem = name: cfg: nixpkgs.lib.nixosSystem {
+      overlay-unstable = system: final: prev: {
+        unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
+      };
+
+      mkSystem = name: cfg: nixpkgs.lib.nixosSystem rec {
         system = cfg.system or "x86_64-linux";
         #specialArgs = inputs;
         modules = [
+          ({ ... }: { nixpkgs.overlays = [ (overlay-unstable system) ]; })
+
           # shared configuration for all hosts 
           {
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
