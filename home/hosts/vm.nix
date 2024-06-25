@@ -4,6 +4,8 @@
   imports = [
     ../river/river.nix
     ../foot.nix
+    ../firefox.nix
+
     ../zsh.nix
     ../nvim.nix
     ../utils.nix
