@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case "$(printf "lock\nleave\nhibernate\nsleep\nrestart\nshut down\ndisplay off" | fuzzel -d -p 'Action: ')" in
+	'lock') ~/scripts/lock ;;
+	'leave') kill -TERM $(pidof river) ;;
+	'hibernate') ~/scripts/lock; systemctl hibernate -i ;;
+	'sleep') ~/scripts/lock; systemctl suspend -i ;;
+	'restart') systemctl reboot -i ;;
+	'shut down') systemctl poweroff -i ;;
+	'display off') xset dpms force off ;;
+	*) exit 1 ;;
+esac
+

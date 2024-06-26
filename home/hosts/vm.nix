@@ -7,6 +7,8 @@
     ../foot.nix
     ../firefox.nix
 
+    ../scripts/scripts.nix
+
     ../zsh.nix
     ../nvim.nix
     ../utils.nix

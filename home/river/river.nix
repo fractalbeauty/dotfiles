@@ -23,6 +23,7 @@ in {
           "Super+Shift Return" = "spawn footclient";
           "Super+Shift F" = "spawn firefox";
           "Super+Shift L" = "spawn '${lockCommand}'";
+          "Super+Shift P" = "spawn ~/scripts/sysact";
         };
       };
 
@@ -34,6 +35,15 @@ in {
       ];
     };
     extraConfig = builtins.readFile ./init;
+  };
+
+  home.file."scripts/lock" = {
+    enable = true;
+    executable = true;
+    text = ''
+      #!/bin/sh
+      ${lockCommand}
+    '';
   };
 }
 
