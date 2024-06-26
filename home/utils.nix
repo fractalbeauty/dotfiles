@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     ncdu
     hyfetch
+    btop
     unstable.croc # v10
   ];
 
