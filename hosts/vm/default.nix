@@ -3,6 +3,10 @@
 {
   imports = [
     ./hardware.nix
+
+    # TODO: this isn't working yet, river crashes when opening xwayland programs (ie fcitx5-configtool)
+    # possibly because of vm graphics driver
+    #./ime.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
