@@ -92,5 +92,8 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
   };
+
+  # waylock
+  security.pam.services.waylock = {};
 }
 
