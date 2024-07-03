@@ -110,6 +110,23 @@ in {
 
         right = [
           {
+            battery = {
+              name = "BAT0";
+              poll-interval = 30000;
+              content = [
+                { map = {
+                  conditions = {
+                    "state == unknown" = { string = { text = "{capacity}% {estimate}"; };  };
+                    "state == discharging" = { string = { text = "{capacity}% {estimate}"; };  };
+                    "state == charging" = { string = { text = "{capacity}% {estimate}"; };  };
+                    "state == full" = { string = { text = "{capacity}% {estimate}"; };  };
+                    "state == \"not charging\"" = { string = { text = "{capacity}% {estimate}"; };  };
+                  };
+                }; }
+              ];
+            };
+          }
+          {
             clock = {
               date-format = "%a %b %d";
               time-format = "%H:%M%p";
