@@ -33,7 +33,7 @@
           # shared configuration for all hosts 
           {
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
-            #networking.hostName = name;
+            networking.hostName = name;
           }
 
           ./hosts/${name}
@@ -58,6 +58,9 @@
 
       systems = {
         vm = {
+          modules = [];
+        };
+        momoe = {
           modules = [];
         };
       };
