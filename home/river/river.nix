@@ -9,6 +9,7 @@ in {
     sway-audio-idle-inhibit
     waylock
     brightnessctl
+    wl-clipboard
   ];
 
   wayland.windowManager.river = {
@@ -21,6 +22,8 @@ in {
 
       map = {
         normal = {
+          # cliphist menu
+          "Super V" = "spawn 'cliphist list | fuzzel -d -p Clipboard:\\ | cliphist decode | wl-copy'";
           "Super+Shift Return" = "spawn footclient";
           "Super+Shift F" = "spawn firefox";
           "Super+Shift L" = "spawn '${lockCommand}'";
@@ -47,6 +50,10 @@ in {
       #!/bin/sh
       ${lockCommand}
     '';
+  };
+
+  services.cliphist = {
+    enable = true;
   };
 }
 
