@@ -65,6 +65,8 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  services.tailscale.enable = true;
+
   time.timeZone = "America/Los_Angeles";
 
   programs.zsh.enable = true;
