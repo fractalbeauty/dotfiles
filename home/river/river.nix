@@ -22,8 +22,11 @@ in {
 
       map = {
         normal = {
+          # run menu
+          "Super R" = "spawn 'fuzzel -p Run:\\ '";
           # cliphist menu
           "Super V" = "spawn 'cliphist list | fuzzel -d -p Clipboard:\\ | cliphist decode | wl-copy'";
+          # launch programs
           "Super+Shift Return" = "spawn footclient";
           "Super+Shift F" = "spawn firefox";
           "Super+Shift L" = "spawn '${lockCommand}'";
