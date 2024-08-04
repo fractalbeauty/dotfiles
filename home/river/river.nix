@@ -25,8 +25,8 @@ in {
           "Super+Shift F" = "spawn firefox";
           "Super+Shift L" = "spawn '${lockCommand}'";
           "Super+Shift P" = "spawn ~/scripts/sysact";
-          "Super+Shift Up" = "spawn 'brightnessctl set 10%+'";
-          "Super+Shift Down" = "spawn 'brightnessctl set 10%-'";
+          "Control+Shift Up" = "spawn 'brightnessctl set 10%+'";
+          "Control+Shift Down" = "spawn 'brightnessctl set 10%-'";
         };
       };
 
