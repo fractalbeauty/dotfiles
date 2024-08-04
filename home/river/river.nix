@@ -8,6 +8,7 @@ in {
     swayidle
     sway-audio-idle-inhibit
     waylock
+    brightnessctl
   ];
 
   wayland.windowManager.river = {
@@ -24,6 +25,8 @@ in {
           "Super+Shift F" = "spawn firefox";
           "Super+Shift L" = "spawn '${lockCommand}'";
           "Super+Shift P" = "spawn ~/scripts/sysact";
+          "Super+Shift Up" = "spawn 'brightnessctl set 10%+'";
+          "Super+Shift Down" = "spawn 'brightnessctl set 10%-'";
         };
       };
 
