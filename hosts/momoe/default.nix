@@ -41,7 +41,7 @@
   # system packages
   environment.systemPackages = with pkgs; [
     dconf
-    
+
     # tools
     vim
     git

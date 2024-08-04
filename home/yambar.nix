@@ -110,6 +110,25 @@ in {
 
         right = [
           {
+            pipewire = {
+              content = [
+                { map = {
+                  conditions = {
+                    "type == sink && ~muted" = { string = { text = "{cubic_volume}%"; }; };
+                    "type == sink && muted" = { string = { text = "muted"; }; };
+                  };
+                }; }
+              ];
+            };
+          }
+          {
+            label = {
+              content = [
+                { string = { text = "/"; }; }
+              ];
+            };
+          }
+          {
             battery = {
               name = "BAT0";
               poll-interval = 30000;
@@ -123,6 +142,13 @@ in {
                     "state == \"not charging\"" = { string = { text = "{capacity}% {estimate}"; };  };
                   };
                 }; }
+              ];
+            };
+          }
+          {
+            label = {
+              content = [
+                { string = { text = "/"; }; }
               ];
             };
           }

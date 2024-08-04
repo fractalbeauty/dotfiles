@@ -10,6 +10,7 @@ in {
     waylock
     brightnessctl
     wl-clipboard
+    pamixer
   ];
 
   wayland.windowManager.river = {
@@ -34,6 +35,10 @@ in {
           # brightness
           "Super+Control Up" = "spawn 'brightnessctl set 10%+'";
           "Super+Control Down" = "spawn 'brightnessctl set 10%-'";
+          # volume
+          "Super Up" = "spawn 'pamixer -i 5'";
+          "Super Down" = "spawn 'pamixer -d 5'";
+          "Super Left" = "spawn 'pamixer -t'";
         };
       };
 

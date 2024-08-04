@@ -101,10 +101,10 @@ riverctl map normal Super Space toggle-float
 riverctl map normal Super F toggle-fullscreen
 
 # Super+{Up,Right,Down,Left} to change layout orientation
-riverctl map normal Super Up    send-layout-cmd rivertile "main-location top"
-riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
-riverctl map normal Super Down  send-layout-cmd rivertile "main-location bottom"
-riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
+# riverctl map normal Super Up    send-layout-cmd rivertile "main-location top"
+# riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
+# riverctl map normal Super Down  send-layout-cmd rivertile "main-location bottom"
+# riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
 
 # Declare a passthrough mode. This mode has only a single mapping to return to
 # normal mode. This makes it useful for testing a nested wayland compositor
@@ -152,4 +152,6 @@ riverctl rule-add -app-id "bar" csd
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6 &
+
+riverctl send-layout-cmd rivertile "main-location left"
 
