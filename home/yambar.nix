@@ -59,7 +59,7 @@ in {
         spacing = 5;
         margin = 7;
 
-        font = "Inconsolata Nerd Font:pixelsize=12";
+        font = "Inconsolata Nerd Font:pixelsize=16";
 
         foreground = colors.base04 + "ff";
         background = colors.base00 + "ff";
