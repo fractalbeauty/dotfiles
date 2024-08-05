@@ -6,6 +6,10 @@
 
     policies = {
       DisablePocket = true;
+
+      Preferences = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = { Value = true; Status = "locked"; };
+      };
     };
 
     profiles.main = {
@@ -13,7 +17,6 @@
       name = "main";
       isDefault = true;
 
-      # TODO: maybe not working?
       userChrome = ''
         #main-window:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
           opacity: 0;
