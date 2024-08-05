@@ -23,6 +23,9 @@ in {
         "editor.defaultFormatter" = "rust-lang.rust-analyzer";
         "editor.formatOnSave" = true;
       };
+      "search.exclude" = {
+        "**/.direnv/**" = true;
+      };
     };
   };
 }
