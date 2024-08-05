@@ -16,6 +16,10 @@
     # nixvim
     nixvim.url = "github:nix-community/nixvim/nixos-24.05";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
+
+    # nix-vscode-extensions
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, nixvim, ... }:
@@ -28,7 +32,10 @@
         system = cfg.system or "x86_64-linux";
         #specialArgs = inputs;
         modules = [
-          ({ ... }: { nixpkgs.overlays = [ (overlay-unstable system) ]; })
+          ({ ... }: {
+            nixpkgs.overlays = [ (overlay-unstable system) ];
+            nixpkgs.config.allowUnfree = true;
+          })
 
           # shared configuration for all hosts 
           {

@@ -6,6 +6,7 @@
     ../yambar.nix
     ../foot.nix
     ../firefox.nix
+    ../vscode.nix
 
     ../scripts/scripts.nix
 
@@ -31,6 +32,7 @@
   stylix.opacity = {
     terminal = 0.9;
   };
+  stylix.targets.vscode.enable = false;
 
   fonts.fontconfig.defaultFonts = {
     monospace = [ "Inconsolata Nerd Font" ];
