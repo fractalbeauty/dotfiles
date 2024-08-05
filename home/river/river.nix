@@ -11,6 +11,8 @@ in {
     brightnessctl
     wl-clipboard
     pamixer
+    wayshot
+    slurp
   ];
 
   wayland.windowManager.river = {
@@ -39,6 +41,9 @@ in {
           "Super Up" = "spawn 'pamixer -i 5'";
           "Super Down" = "spawn 'pamixer -d 5'";
           "Super Left" = "spawn 'pamixer -t'";
+          # screenshots
+          "None Print" = "spawn 'wayshot --stdout | wl-copy'";
+          "Super Print" = "spawn 'wayshot -s \"$(slurp)\" --stdout | wl-copy'";
         };
       };
 
