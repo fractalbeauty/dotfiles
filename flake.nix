@@ -32,6 +32,8 @@
         system = cfg.system or "x86_64-linux";
         #specialArgs = inputs;
         modules = [
+          ./modules/lemurs.nix
+
           ({ ... }: {
             nixpkgs.overlays = [ (overlay-unstable system) ];
             nixpkgs.config.allowUnfree = true;

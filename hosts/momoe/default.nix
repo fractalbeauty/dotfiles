@@ -81,6 +81,16 @@
   hardware.opengl.enable = true;
   hardware.opengl.driSupport = true;
 
+  # lemurs
+  # TODO
+  # services.lemurs = {
+  #   enable = true;
+  #   settings = {
+  #     #
+  #   };
+  #   river.enable = true;
+  # };
+
   # waylock
   security.pam.services.waylock = {};
 
