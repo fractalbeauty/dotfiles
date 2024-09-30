@@ -18,6 +18,8 @@
   home.packages = with pkgs; [
     #inconsolata
     inconsolata-nerdfont
+
+    nomachine-client
   ];
 
   stylix.enable = true;
