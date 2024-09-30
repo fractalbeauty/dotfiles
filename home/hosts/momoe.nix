@@ -1,5 +1,8 @@
 { inputs, pkgs, ... }:
 
+let
+  nerdfonts-pkg = (pkgs.nerdfonts.override { fonts = [ "Inconsolata" ]; });
+in
 {
   imports = [
     ../river/river.nix
@@ -16,8 +19,9 @@
   ];
 
   home.packages = with pkgs; [
-    #inconsolata
-    inconsolata-nerdfont
+    noto-fonts
+    noto-fonts-cjk-sans
+    nerdfonts-pkg
 
     nomachine-client
   ];
@@ -27,8 +31,16 @@
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
   stylix.fonts = {
     monospace = {
-      package = pkgs.inconsolata-nerdfont;
+      package = nerdfonts-pkg;
       name = "Inconsolata Nerd Font";
+    };
+    sansSerif = {
+      package = pkgs.noto-fonts;
+      name = "Noto Sans";
+    };
+    serif = {
+      package = pkgs.noto-fonts;
+      name = "Noto Serif";
     };
   };
   stylix.opacity = {
@@ -38,6 +50,8 @@
 
   fonts.fontconfig.defaultFonts = {
     monospace = [ "Inconsolata Nerd Font" ];
+    sansSerif = [ "Noto Sans" ];
+    serif = [ "Noto Serif" ];
   };
 
   home.stateVersion = "24.05";
