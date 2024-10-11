@@ -19,12 +19,15 @@ in
   ];
 
   home.packages = with pkgs; [
+    # fonts
     noto-fonts
     noto-fonts-cjk-sans
     nerdfonts-pkg
 
+    # nomachine
     nomachine-client
 
+    # games
     lutris
   ];
 
