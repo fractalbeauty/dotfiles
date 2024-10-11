@@ -27,7 +27,7 @@ in
   ];
 
   stylix.enable = true;
-  stylix.image = ../wallpapers/riverside.jpg;
+  stylix.image = ../wallpapers/riverside2.jpg;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
   stylix.fonts = {
     monospace = {
