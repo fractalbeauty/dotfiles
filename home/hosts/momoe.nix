@@ -27,6 +27,9 @@ in
     # nomachine
     nomachine-client
 
+    # anki
+    anki-bin
+
     # games
     lutris
   ];
