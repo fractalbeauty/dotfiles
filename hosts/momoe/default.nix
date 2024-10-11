@@ -81,6 +81,10 @@
   hardware.opengl.enable = true;
   hardware.opengl.driSupport = true;
 
+  # virtualbox
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "hazel" ];
+
   # lemurs
   # TODO
   # services.lemurs = {
