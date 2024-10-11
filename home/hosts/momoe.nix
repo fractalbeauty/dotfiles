@@ -24,6 +24,8 @@ in
     nerdfonts-pkg
 
     nomachine-client
+
+    lutris
   ];
 
   stylix.enable = true;
