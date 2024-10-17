@@ -24,7 +24,7 @@ in
     noto-fonts-cjk-sans
     nerdfonts-pkg
 
-    # nomachine
+    # tools
     nomachine-client
 
     # apps

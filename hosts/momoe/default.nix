@@ -66,6 +66,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # tailscale
   services.tailscale.enable = true;
 
   time.timeZone = "America/Los_Angeles";
