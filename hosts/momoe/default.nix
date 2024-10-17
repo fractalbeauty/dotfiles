@@ -85,6 +85,9 @@
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "hazel" ];
 
+  # envfs
+  services.envfs.enable = true;
+
   # lemurs
   # TODO
   # services.lemurs = {
