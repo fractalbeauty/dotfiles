@@ -27,8 +27,9 @@ in
     # nomachine
     nomachine-client
 
-    # anki
+    # apps
     anki-bin
+    obsidian
 
     # games
     lutris
