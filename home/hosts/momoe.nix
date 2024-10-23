@@ -26,6 +26,7 @@ in
 
     # tools
     nomachine-client
+    zathura
 
     # apps
     anki-bin
