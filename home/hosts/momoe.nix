@@ -26,7 +26,6 @@ in
 
     # tools
     nomachine-client
-    zathura
 
     # apps
     anki-bin
@@ -35,6 +34,8 @@ in
     # games
     lutris
   ];
+
+  programs.zathura.enable = true;
 
   programs.wpaperd.enable = true;
 
