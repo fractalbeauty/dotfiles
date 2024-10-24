@@ -52,6 +52,7 @@ in {
         "'swayidle timeout 300 \"${lockCommand}\"'"
         "sway-audio-idle-inhibit"
         "'foot --server'"
+        "wpaperd"
       ];
     };
     extraConfig = builtins.readFile ./init;
