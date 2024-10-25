@@ -26,6 +26,7 @@ in
 
     # tools
     nomachine-client
+    ngrok
 
     # apps
     anki-bin
