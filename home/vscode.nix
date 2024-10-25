@@ -15,7 +15,7 @@ in {
 
     userSettings = {
        "workbench.colorTheme" = "Everforest Dark";
-      "[javascript][typescript][javascriptreact][typescriptreact]" = {
+      "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc]" = {
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "editor.formatOnSave" = true;
       };
