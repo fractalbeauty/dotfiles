@@ -4,6 +4,7 @@
   imports = [
     ./hardware.nix
     ./battery.nix
+    ./ime.nix
   ];
 
   # systemd-boot

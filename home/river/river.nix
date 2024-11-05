@@ -53,6 +53,7 @@ in {
         "sway-audio-idle-inhibit"
         "'foot --server'"
         "wpaperd"
+        "fcitx5"
       ];
     };
     extraConfig = builtins.readFile ./init;
