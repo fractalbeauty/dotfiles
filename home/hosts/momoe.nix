@@ -32,6 +32,8 @@ in
     # apps
     anki-bin
     obsidian
+    qbittorrent
+    mpv
 
     # games
     lutris
