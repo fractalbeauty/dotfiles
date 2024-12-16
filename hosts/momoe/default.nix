@@ -5,6 +5,7 @@
     ./hardware.nix
     ./battery.nix
     ./ime.nix
+    ./gaming.nix
   ];
 
   # systemd-boot
