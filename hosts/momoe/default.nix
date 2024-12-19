@@ -6,6 +6,7 @@
     ./battery.nix
     ./ime.nix
     ./gaming.nix
+    ./bluetooth.nix
   ];
 
   # systemd-boot
