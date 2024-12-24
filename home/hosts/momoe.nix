@@ -37,6 +37,7 @@ in
     obsidian
     qbittorrent
     mpv
+    google-chrome
 
     # games
     lutris
