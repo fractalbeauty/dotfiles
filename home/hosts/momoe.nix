@@ -30,6 +30,7 @@ in
     signal-desktop
     file
     tree
+    podman-tui
 
     # apps
     anki-bin

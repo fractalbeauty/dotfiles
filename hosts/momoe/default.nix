@@ -89,6 +89,14 @@
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "hazel" ];
 
+  # podman
+  virtualisation.containers.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
+  };
+
   # envfs
   services.envfs.enable = true;
 
