@@ -28,6 +28,8 @@ in
     nomachine-client
     ngrok
     signal-desktop
+    file
+    tree
 
     # apps
     anki-bin
