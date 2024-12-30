@@ -79,7 +79,7 @@
   users.users.hazel = {
     isNormalUser = true;
     home = "/home/hazel";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "ydotool" ];
   };
   
   hardware.graphics.enable = true;
@@ -111,6 +111,9 @@
 
   # waylock
   security.pam.services.waylock = {};
+
+  # ydotool
+  programs.ydotool.enable = true;
 
   # nixos state version
   system.stateVersion = "24.05";
