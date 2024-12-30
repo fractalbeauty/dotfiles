@@ -46,10 +46,11 @@ in {
     };
   };
 
+  # TODO: it would be nice to not have to duplicate language in package.json and scope in each file
   home.file = lib.mkMerge [
     (builtins.listToAttrs (
       map (f: {
-        name = "${snippetDir}/${f}";
+        name = "${snippetDir}/${builtins.replaceStrings [".json"] [".code-snippets"] f}";
         value = {
           source = ../snippets/${f};
         };

@@ -1,5 +1,6 @@
 {
   "tsconfig": {
+    "scope": "json",
     "description": "Total Typescript tsconfig cheat sheet",
     "prefix": "tsconfig",
     "body": [
@@ -42,7 +43,8 @@
       "    /* If your code doesn't run in the DOM: */",
       "    \"lib\": [\"es2022\"]",
       "  }",
-      "}"
+      "}",
+      ""
     ]
   }
 }
