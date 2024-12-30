@@ -30,8 +30,7 @@
 
   security.polkit.enable = true;
 
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport = true;
+  hardware.graphics.enable = true;
   
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";

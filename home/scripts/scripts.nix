@@ -6,6 +6,7 @@
     settings = {
       main = {
         terminal = "footclient";
+        dpi-aware = "no";
       };
     };
   };

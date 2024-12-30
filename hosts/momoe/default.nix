@@ -82,8 +82,7 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
   
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport = true;
+  hardware.graphics.enable = true;
 
   # virtualbox
   virtualisation.virtualbox.host.enable = true;
