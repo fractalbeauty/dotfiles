@@ -37,7 +37,10 @@
           })
         {
           # save with leader+w
-          "<leader>w" = ":w<cr>";
+          "<leader>w" = ":w<CR>";
+
+          # save+make with leader+m
+          "<leader>m" = ":w<CR>:!make<CR><CR>";
 
           # move line with alt+up/down
           "<M-Up>" = ":move -2<CR>";
