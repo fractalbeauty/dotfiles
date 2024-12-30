@@ -1,0 +1,19 @@
+{
+  "React Function Component": {
+    "scope": "typescriptreact",
+    "prefix": "rfc",
+    "description": "React Function Component",
+    "body": [
+      "import React from \"react\"",
+      "",
+      "type ${TM_FILENAME_BASE}Props = {",
+      "\t$1",
+      "}",
+      "",
+      "export const $TM_FILENAME_BASE: React.FC<${TM_FILENAME_BASE}Props> = ({$2}) => {",
+      "\treturn ($3);",
+      "}",
+      ""
+    ]
+  }
+}

@@ -5,6 +5,10 @@
       {
         "language": "json",
         "path": "./json.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./typescriptreact.json"
       }
     ]
   }
