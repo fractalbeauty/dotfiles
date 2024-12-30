@@ -1,7 +1,23 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, lib, config, ... }:
 
 let
   exts = inputs.nix-vscode-extensions.extensions.${pkgs.system};
+
+  # TODO: this seems kinda brittle
+  vscodeCfg = config.programs.vscode;
+  vscodePname = vscodeCfg.package.pname;
+  configDir = {
+    "vscode" = "Code";
+    "vscode-insiders" = "Code - Insiders";
+    "vscodium" = "VSCodium";
+    "openvscode-server" = "OpenVSCode Server";
+  }.${vscodePname};
+  userDir = "${config.xdg.configHome}/${configDir}/User";
+  snippetDir = "${userDir}/snippets";
+
+  snippetFiles = builtins.filter (f: f != "package.json") (
+    builtins.attrNames (builtins.readDir ../snippets)
+  );
 in {
   programs.vscode = {
     enable = true;
@@ -29,5 +45,15 @@ in {
       };
     };
   };
-}
 
+  home.file = lib.mkMerge [
+    (builtins.listToAttrs (
+      map (f: {
+        name = "${snippetDir}/${f}";
+        value = {
+          source = ../snippets/${f};
+        };
+      }) snippetFiles
+    ))
+  ];
+}
