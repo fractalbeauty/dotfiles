@@ -11,6 +11,7 @@ in {
       exts.vscode-marketplace.sainnhe.everforest
       exts.vscode-marketplace.esbenp.prettier-vscode
       exts.vscode-marketplace.rust-lang.rust-analyzer
+      exts.vscode-marketplace.tamasfe.even-better-toml
     ];
 
     userSettings = {
