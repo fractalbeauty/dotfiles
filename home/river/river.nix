@@ -44,6 +44,8 @@ in {
           # screenshots
           "None Print" = "spawn 'wayshot --stdout | wl-copy'";
           "Super Print" = "spawn 'wayshot -s \"$(slurp)\" --stdout | wl-copy'";
+          # insert datetime
+          "Super+Shift T" = "spawn 'sleep 0.3 && echo -n `date +\"%Y-%m-%d %H:%M:%S\"` | ydotool type -f- -d5 -H5'";
         };
       };
 
