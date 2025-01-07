@@ -48,6 +48,8 @@
     # tools
     vim
     git
+
+    config.boot.kernelPackages.perf
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
