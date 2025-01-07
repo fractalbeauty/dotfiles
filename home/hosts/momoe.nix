@@ -24,15 +24,10 @@ in
     noto-fonts-cjk-sans
     nerdfonts-pkg
 
-    # tools
-    nomachine-client
-    ngrok
-    signal-desktop
-    file
-    tree
-    podman-tui
-
     # apps
+    nomachine-client
+    signal-desktop
+    podman-tui
     anki-bin
     obsidian
     qbittorrent

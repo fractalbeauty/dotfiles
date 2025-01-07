@@ -6,6 +6,9 @@
     hyfetch
     btop
     unstable.croc # v10
+    ngrok
+    file
+    tree
   ];
 
   programs.git = {
