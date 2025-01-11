@@ -5,7 +5,7 @@
     ncdu
     hyfetch
     btop
-    unstable.croc # v10
+    croc
     ngrok
     file
     tree

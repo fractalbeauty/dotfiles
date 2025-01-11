@@ -1,8 +1,5 @@
 { inputs, pkgs, ... }:
 
-let
-  nerdfonts-pkg = (pkgs.nerdfonts.override { fonts = [ "Inconsolata" ]; });
-in
 {
   imports = [
     ../river/river.nix
@@ -22,7 +19,7 @@ in
     # fonts
     noto-fonts
     noto-fonts-cjk-sans
-    nerdfonts-pkg
+    nerd-fonts.inconsolata
 
     # apps
     nomachine-client
@@ -47,7 +44,7 @@ in
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
   stylix.fonts = {
     monospace = {
-      package = nerdfonts-pkg;
+      package = pkgs.nerd-fonts.inconsolata;
       name = "Inconsolata Nerd Font";
     };
     sansSerif = {
@@ -72,4 +69,3 @@ in
 
   home.stateVersion = "24.05";
 }
-

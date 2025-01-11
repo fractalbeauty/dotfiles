@@ -3,11 +3,10 @@
 
   inputs = {
     # nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # home-manager
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # stylix
@@ -25,12 +24,8 @@
     nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, stylix, nixvim, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, stylix, nixvim, ... }:
     let
-      overlay-unstable = system: final: prev: {
-        unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
-      };
-
       mkSystem = name: cfg: nixpkgs.lib.nixosSystem rec {
         system = cfg.system or "x86_64-linux";
         #specialArgs = inputs;
@@ -38,7 +33,6 @@
           ./modules/lemurs.nix
 
           ({ ... }: {
-            nixpkgs.overlays = [ (overlay-unstable system) ];
             nixpkgs.config.allowUnfree = true;
           })
 
