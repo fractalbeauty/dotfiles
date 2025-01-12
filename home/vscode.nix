@@ -28,11 +28,12 @@ in {
       exts.vscode-marketplace.esbenp.prettier-vscode
       exts.vscode-marketplace.rust-lang.rust-analyzer
       exts.vscode-marketplace.tamasfe.even-better-toml
+      exts.vscode-marketplace.svelte.svelte-vscode
     ];
 
     userSettings = {
        "workbench.colorTheme" = "Everforest Dark";
-      "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc]" = {
+      "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css]" = {
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "editor.formatOnSave" = true;
       };
@@ -42,6 +43,11 @@ in {
       };
       "search.exclude" = {
         "**/.direnv/**" = true;
+      };
+      "svelte.enable-ts-plugin" = true;
+      "[svelte]" = {
+        "editor.defaultFormatter" = "svelte.svelte-vscode";
+        "editor.formatOnSave" = true;
       };
     };
   };
