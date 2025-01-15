@@ -63,9 +63,6 @@
       };
 
       systems = {
-        vm = {
-          modules = [];
-        };
         momoe = {
           modules = [];
         };
