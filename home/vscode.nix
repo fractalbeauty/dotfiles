@@ -29,6 +29,7 @@ in {
       exts.vscode-marketplace.rust-lang.rust-analyzer
       exts.vscode-marketplace.tamasfe.even-better-toml
       exts.vscode-marketplace.svelte.svelte-vscode
+      exts.vscode-marketplace.unifiedjs.vscode-mdx
     ];
 
     userSettings = {
