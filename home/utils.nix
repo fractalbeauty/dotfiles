@@ -9,6 +9,7 @@
     ngrok
     file
     tree
+    flyctl
   ];
 
   programs.git = {
