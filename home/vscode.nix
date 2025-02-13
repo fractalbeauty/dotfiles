@@ -30,6 +30,7 @@ in {
       exts.vscode-marketplace.tamasfe.even-better-toml
       exts.vscode-marketplace.svelte.svelte-vscode
       exts.vscode-marketplace.unifiedjs.vscode-mdx
+      exts.vscode-marketplace.astro-build.astro-vscode
     ];
 
     userSettings = {
@@ -48,6 +49,10 @@ in {
       "svelte.enable-ts-plugin" = true;
       "[svelte]" = {
         "editor.defaultFormatter" = "svelte.svelte-vscode";
+        "editor.formatOnSave" = true;
+      };
+      "[astro]" = {
+        "editor.defaultFormatter" = "astro-build.astro-vscode";
         "editor.formatOnSave" = true;
       };
     };
