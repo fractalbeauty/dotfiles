@@ -40,8 +40,8 @@
   programs.wpaperd.enable = true;
 
   stylix.enable = true;
-  stylix.image = ../wallpapers/riverside.jpg;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
+  stylix.image = ../wallpapers/purple.png;
+  stylix.polarity = "dark";
   stylix.fonts = {
     monospace = {
       package = pkgs.nerd-fonts.inconsolata;
