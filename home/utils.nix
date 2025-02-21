@@ -10,6 +10,7 @@
     file
     tree
     flyctl
+    powertop
   ];
 
   programs.git = {
