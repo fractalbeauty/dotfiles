@@ -49,6 +49,8 @@
     vim
     git
 
+    podman-compose
+
     config.boot.kernelPackages.perf
   ];
 
