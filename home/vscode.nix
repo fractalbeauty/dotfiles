@@ -22,38 +22,40 @@ in {
   programs.vscode = {
     enable = true;
 
-    extensions = [
-      exts.vscode-marketplace.mkhl.direnv
-      exts.vscode-marketplace.sainnhe.everforest
-      exts.vscode-marketplace.esbenp.prettier-vscode
-      exts.vscode-marketplace.rust-lang.rust-analyzer
-      exts.vscode-marketplace.tamasfe.even-better-toml
-      exts.vscode-marketplace.svelte.svelte-vscode
-      exts.vscode-marketplace.unifiedjs.vscode-mdx
-      exts.vscode-marketplace.astro-build.astro-vscode
-    ];
+    profiles.default = {
+      extensions = [
+        exts.vscode-marketplace.mkhl.direnv
+        exts.vscode-marketplace.sainnhe.everforest
+        exts.vscode-marketplace.esbenp.prettier-vscode
+        exts.vscode-marketplace.rust-lang.rust-analyzer
+        exts.vscode-marketplace.tamasfe.even-better-toml
+        exts.vscode-marketplace.svelte.svelte-vscode
+        exts.vscode-marketplace.unifiedjs.vscode-mdx
+        exts.vscode-marketplace.astro-build.astro-vscode
+      ];
 
-    userSettings = {
-       "workbench.colorTheme" = "Everforest Dark";
-      "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css]" = {
-        "editor.defaultFormatter" = "esbenp.prettier-vscode";
-        "editor.formatOnSave" = true;
-      };
-      "[rust]" = {
-        "editor.defaultFormatter" = "rust-lang.rust-analyzer";
-        "editor.formatOnSave" = true;
-      };
-      "search.exclude" = {
-        "**/.direnv/**" = true;
-      };
-      "svelte.enable-ts-plugin" = true;
-      "[svelte]" = {
-        "editor.defaultFormatter" = "svelte.svelte-vscode";
-        "editor.formatOnSave" = true;
-      };
-      "[astro]" = {
-        "editor.defaultFormatter" = "astro-build.astro-vscode";
-        "editor.formatOnSave" = true;
+      userSettings = {
+         "workbench.colorTheme" = "Everforest Dark";
+        "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css]" = {
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          "editor.formatOnSave" = true;
+        };
+        "[rust]" = {
+          "editor.defaultFormatter" = "rust-lang.rust-analyzer";
+          "editor.formatOnSave" = true;
+        };
+        "search.exclude" = {
+          "**/.direnv/**" = true;
+        };
+        "svelte.enable-ts-plugin" = true;
+        "[svelte]" = {
+          "editor.defaultFormatter" = "svelte.svelte-vscode";
+          "editor.formatOnSave" = true;
+        };
+        "[astro]" = {
+          "editor.defaultFormatter" = "astro-build.astro-vscode";
+          "editor.formatOnSave" = true;
+        };
       };
     };
   };

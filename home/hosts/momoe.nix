@@ -37,7 +37,7 @@
 
   programs.zathura.enable = true;
 
-  programs.wpaperd.enable = true;
+  services.wpaperd.enable = true;
 
   stylix.enable = true;
   stylix.image = ../wallpapers/purple.png;
