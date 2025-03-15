@@ -43,6 +43,9 @@
   stylix.enable = true;
   stylix.image = ../wallpapers/purple.png;
   stylix.polarity = "dark";
+  #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-forest-light.yaml";
+  #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
+  #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
   stylix.fonts = {
     monospace = {
       package = pkgs.nerd-fonts.inconsolata;
