@@ -33,13 +33,13 @@
         system = cfg.system or "x86_64-linux";
         #specialArgs = inputs;
         modules = [
-          ./modules/lemurs.nix
+          ./nixos/lemurs.nix
 
           ({ ... }: {
             nixpkgs.config.allowUnfree = true;
           })
 
-          # shared configuration for all hosts 
+          # shared configuration for all hosts
           {
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
             networking.hostName = name;
