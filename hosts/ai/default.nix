@@ -7,6 +7,7 @@
     ../../nixos/tailscale.nix
   ];
 
+  # nixos-wsl
   wsl.enable = true;
   wsl.defaultUser = "hazel";
 
