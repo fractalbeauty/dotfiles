@@ -1,7 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [];
+  imports = [
+    ../../nixos/tailscale.nix
+  ];
 
   wsl.enable = true;
   wsl.defaultUser = "hazel";
@@ -17,9 +19,6 @@
 
     podman-compose
   ];
-
-  # tailscale
-  services.tailscale.enable = true;
 
   time.timeZone = "America/Los_Angeles";
 

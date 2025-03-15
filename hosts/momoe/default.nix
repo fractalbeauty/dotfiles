@@ -7,6 +7,7 @@
     ../../nixos/bluetooth.nix
     ../../nixos/gaming.nix
     ../../nixos/ime.nix
+    ../../nixos/tailscale.nix
   ];
 
   # systemd-boot
@@ -72,9 +73,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  # tailscale
-  services.tailscale.enable = true;
 
   time.timeZone = "America/Los_Angeles";
 
