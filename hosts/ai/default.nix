@@ -11,10 +11,6 @@
   wsl.enable = true;
   wsl.defaultUser = "hazel";
 
-  environment.systemPackages = with pkgs; [
-    dconf
-  ];
-
   users.users.hazel = {
     isNormalUser = true;
     home = "/home/hazel";

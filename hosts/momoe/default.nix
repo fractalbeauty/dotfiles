@@ -46,8 +46,6 @@
 
   # system packages
   environment.systemPackages = with pkgs; [
-    dconf
-
     config.boot.kernelPackages.perf
   ];
 
