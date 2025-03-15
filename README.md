@@ -1,4 +1,9 @@
 # dotfiles
 
-my dotfiles for nixos, not super clean yet so don't look too close :P
+my dotfiles for nixos
 
+- `home/` - home-manager modules
+- `hosts/` - per-system config
+- `nixos/` - nixos modules
+- `shells/` - reusable devshells
+- `snippets/` - editor snippets
