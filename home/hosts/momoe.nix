@@ -25,7 +25,6 @@
     # apps
     nomachine-client
     signal-desktop
-    podman-tui
     anki-bin
     obsidian
     qbittorrent

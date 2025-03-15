@@ -9,9 +9,10 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  # podman-compose
+  # podman-compose, podman-tui
   environment.systemPackages = with pkgs; [
     podman-compose
+    podman-tui
   ];
 }
 
