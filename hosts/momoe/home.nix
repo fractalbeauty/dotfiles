@@ -2,18 +2,18 @@
 
 {
   imports = [
-    ../river/river.nix
-    ../yambar.nix
-    ../foot.nix
-    ../firefox.nix
-    ../vscode.nix
-    ../senpai.nix
+    ../../home/river/river.nix
+    ../../home/yambar.nix
+    ../../home/foot.nix
+    ../../home/firefox.nix
+    ../../home/vscode.nix
+    ../../home/senpai.nix
 
-    ../scripts/scripts.nix
+    ../../home/scripts/scripts.nix
 
-    ../zsh.nix
-    ../nvim.nix
-    ../utils.nix
+    ../../home/zsh.nix
+    ../../home/nvim.nix
+    ../../home/utils.nix
   ];
 
   home.packages = with pkgs; [

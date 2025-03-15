@@ -59,7 +59,7 @@
 
               stylix.homeManagerModules.stylix
 
-              ./home/hosts/${name}.nix
+              ./hosts/${name}/home.nix
             ];
           }
         ] ++ (cfg.modules or []);

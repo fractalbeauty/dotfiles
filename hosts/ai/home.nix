@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ../zsh.nix
-    ../nvim.nix
-    ../utils.nix
+    ../../home/nvim.nix
+    ../../home/utils.nix
+    ../../home/zsh.nix
   ];
 
   home.stateVersion = "24.05";
