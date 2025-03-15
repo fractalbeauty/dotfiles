@@ -7,6 +7,7 @@
     ../foot.nix
     ../firefox.nix
     ../vscode.nix
+    ../senpai.nix
 
     ../scripts/scripts.nix
 
