@@ -5,6 +5,7 @@
     ./hardware.nix
     ../../nixos/battery.nix
     ../../nixos/bluetooth.nix
+    ../../nixos/common.nix
     ../../nixos/gaming.nix
     ../../nixos/ime.nix
     ../../nixos/tailscale.nix
@@ -46,10 +47,6 @@
   environment.systemPackages = with pkgs; [
     dconf
 
-    # tools
-    vim
-    git
-
     podman-compose
 
     config.boot.kernelPackages.perf
@@ -74,16 +71,12 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  time.timeZone = "America/Los_Angeles";
-
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
   users.users.hazel = {
     isNormalUser = true;
     home = "/home/hazel";
     extraGroups = [ "wheel" "networkmanager" "ydotool" ];
   };
-  
+
   hardware.graphics.enable = true;
 
   # virtualbox
