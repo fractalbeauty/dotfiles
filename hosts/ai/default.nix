@@ -3,6 +3,7 @@
 {
   imports = [
     ../../nixos/common.nix
+    ../../nixos/podman.nix
     ../../nixos/tailscale.nix
   ];
 
@@ -11,22 +12,12 @@
 
   environment.systemPackages = with pkgs; [
     dconf
-
-    podman-compose
   ];
 
   users.users.hazel = {
     isNormalUser = true;
     home = "/home/hazel";
     extraGroups = [ "wheel" ];
-  };
-
-  # podman
-  virtualisation.containers.enable = true;
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-    defaultNetwork.settings.dns_enabled = true;
   };
 
   # envfs

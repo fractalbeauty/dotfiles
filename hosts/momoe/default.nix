@@ -8,6 +8,7 @@
     ../../nixos/common.nix
     ../../nixos/gaming.nix
     ../../nixos/ime.nix
+    ../../nixos/podman.nix
     ../../nixos/tailscale.nix
   ];
 
@@ -47,8 +48,6 @@
   environment.systemPackages = with pkgs; [
     dconf
 
-    podman-compose
-
     config.boot.kernelPackages.perf
   ];
 
@@ -82,14 +81,6 @@
   # virtualbox
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "hazel" ];
-
-  # podman
-  virtualisation.containers.enable = true;
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-    defaultNetwork.settings.dns_enabled = true;
-  };
 
   # envfs
   services.envfs.enable = true;
