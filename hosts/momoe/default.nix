@@ -3,10 +3,10 @@
 {
   imports = [
     ./hardware.nix
-    ./battery.nix
-    ./ime.nix
-    ./gaming.nix
-    ./bluetooth.nix
+    ../../nixos/battery.nix
+    ../../nixos/bluetooth.nix
+    ../../nixos/gaming.nix
+    ../../nixos/ime.nix
   ];
 
   # systemd-boot

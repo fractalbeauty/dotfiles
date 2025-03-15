@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  # fcitx5
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
