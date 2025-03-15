@@ -9,6 +9,10 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # nixos-wsl
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
+
     # stylix
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +27,7 @@
     nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, stylix, nixvim, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixos-wsl, stylix, nixvim, ... }:
     let
       mkSystem = name: cfg: nixpkgs.lib.nixosSystem rec {
         system = cfg.system or "x86_64-linux";
@@ -64,6 +68,11 @@
       systems = {
         momoe = {
           modules = [];
+        };
+        ai = {
+          modules = [
+            nixos-wsl.nixosModules.default
+          ];
         };
       };
     in {
