@@ -32,6 +32,7 @@ in {
         exts.vscode-marketplace.svelte.svelte-vscode
         exts.vscode-marketplace.unifiedjs.vscode-mdx
         exts.vscode-marketplace.astro-build.astro-vscode
+        exts.vscode-marketplace.elmtooling.elm-ls-vscode
       ];
 
       userSettings = {
@@ -54,6 +55,10 @@ in {
         };
         "[astro]" = {
           "editor.defaultFormatter" = "astro-build.astro-vscode";
+          "editor.formatOnSave" = true;
+        };
+        "[elm]" = {
+          "editor.defaultFormatter" = "elmtooling.elm-ls-vscode";
           "editor.formatOnSave" = true;
         };
       };
