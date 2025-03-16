@@ -20,6 +20,12 @@
             pkgs.nodePackages.typescript-language-server
           ];
         };
+        elm = pkgs.mkShell {
+          buildInputs = [
+            pkgs.elmPackages.elm
+            pkgs.elmPackages.elm-format
+          ];
+        };
       });
     };
 }
