@@ -3,6 +3,7 @@
 {
   imports = [
     ../../home/nvim.nix
+    ../../home/senpai.nix
     ../../home/utils.nix
     ../../home/zsh.nix
   ];
