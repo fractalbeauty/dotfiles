@@ -11,6 +11,7 @@
     tree
     flyctl
     powertop
+    unzip
   ];
 
   programs.git = {
