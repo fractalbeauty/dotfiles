@@ -26,6 +26,11 @@
             pkgs.elmPackages.elm-format
           ];
         };
+        deno = pkgs.mkShell {
+          buildInputs = [
+            pkgs.deno
+          ];
+        };
       });
     };
 }
