@@ -33,6 +33,7 @@ in {
         exts.vscode-marketplace.unifiedjs.vscode-mdx
         exts.vscode-marketplace.astro-build.astro-vscode
         exts.vscode-marketplace.elmtooling.elm-ls-vscode
+        exts.vscode-marketplace.denoland.vscode-deno
       ];
 
       userSettings = {
