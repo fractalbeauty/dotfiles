@@ -64,6 +64,8 @@
   };
   stylix.targets.vscode.enable = false;
 
+  stylix.targets.firefox.profileNames = [ "main" ];
+
   fonts.fontconfig.defaultFonts = {
     monospace = [ "Inconsolata Nerd Font" ];
     sansSerif = [ "Noto Sans" ];
