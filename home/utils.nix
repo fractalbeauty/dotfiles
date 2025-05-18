@@ -12,6 +12,7 @@
     flyctl
     powertop
     unzip
+    tokei
   ];
 
   programs.git = {
