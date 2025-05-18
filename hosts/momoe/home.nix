@@ -40,7 +40,8 @@
   services.wpaperd.enable = true;
 
   stylix.enable = true;
-  stylix.image = ../../home/wallpapers/purple.png;
+  stylix.image = ../../home/wallpapers/satellites.jpg;
+  stylix.imageScalingMode = "fill";
   stylix.polarity = "dark";
   #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-forest-light.yaml";
   #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
