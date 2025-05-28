@@ -57,7 +57,7 @@
                 programs.home-manager.enable = true;
               }
 
-              stylix.homeManagerModules.stylix
+              stylix.homeModules.stylix
 
               ./hosts/${name}/home.nix
             ];
