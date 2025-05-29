@@ -37,27 +37,33 @@ in {
       ];
 
       userSettings = {
-         "workbench.colorTheme" = "Everforest Dark";
+        "workbench.colorTheme" = "Everforest Dark";
+        
+        "search.exclude" = {
+          "**/.direnv/**" = true;
+        };
+
         "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css]" = {
           "editor.defaultFormatter" = "esbenp.prettier-vscode";
           "editor.formatOnSave" = true;
         };
+
         "[rust]" = {
           "editor.defaultFormatter" = "rust-lang.rust-analyzer";
           "editor.formatOnSave" = true;
         };
-        "search.exclude" = {
-          "**/.direnv/**" = true;
-        };
+
         "svelte.enable-ts-plugin" = true;
         "[svelte]" = {
           "editor.defaultFormatter" = "svelte.svelte-vscode";
           "editor.formatOnSave" = true;
         };
+
         "[astro]" = {
           "editor.defaultFormatter" = "astro-build.astro-vscode";
           "editor.formatOnSave" = true;
         };
+
         "[elm]" = {
           "editor.defaultFormatter" = "elmtooling.elm-ls-vscode";
           "editor.formatOnSave" = true;
