@@ -48,6 +48,7 @@ in {
           "editor.formatOnSave" = true;
         };
 
+        "rust-analyzer.check.command" = "clippy";
         "[rust]" = {
           "editor.defaultFormatter" = "rust-lang.rust-analyzer";
           "editor.formatOnSave" = true;
