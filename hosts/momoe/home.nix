@@ -30,6 +30,8 @@
     qbittorrent
     mpv
     google-chrome
+    obs-studio
+    obs-studio-plugins.wlrobs
 
     # games
     lutris
