@@ -8,6 +8,7 @@
     ../../home/firefox.nix
     ../../home/vscode.nix
     ../../home/senpai.nix
+    ../../home/obs-studio.nix
 
     ../../home/scripts/scripts.nix
 
@@ -30,8 +31,6 @@
     qbittorrent
     mpv
     google-chrome
-    obs-studio
-    obs-studio-plugins.wlrobs
 
     # games
     lutris
