@@ -14,6 +14,7 @@
           buildInputs = with pkgs; [
             (python3.withPackages (python-pkgs: []))
             uv
+            ruff
           ];
           shellHook = ''
             export UV_PYTHON_DOWNLOADS=never

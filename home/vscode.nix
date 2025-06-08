@@ -34,6 +34,7 @@ in {
         exts.vscode-marketplace.astro-build.astro-vscode
         exts.vscode-marketplace.elmtooling.elm-ls-vscode
         exts.vscode-marketplace.denoland.vscode-deno
+        exts.vscode-marketplace.charliermarsh.ruff
       ];
 
       userSettings = {
@@ -67,6 +68,11 @@ in {
 
         "[elm]" = {
           "editor.defaultFormatter" = "elmtooling.elm-ls-vscode";
+          "editor.formatOnSave" = true;
+        };
+
+        "[python]" = {
+          "editor.defaultFormatter" = "charliermarsh.ruff";
           "editor.formatOnSave" = true;
         };
       };
