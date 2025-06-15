@@ -95,11 +95,17 @@
   #   river.enable = true;
   # };
 
+  # fprintd
+  services.fprintd.enable = true;
+
   # waylock
   security.pam.services.waylock = {};
 
   # ydotool
   programs.ydotool.enable = true;
+
+  # xdg-desktop-portal
+  environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
 
   # nixos state version
   system.stateVersion = "24.05";
