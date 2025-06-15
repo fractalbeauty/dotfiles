@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-  time.timeZone = "America/Los_Angeles";
+  # time.timeZone = "America/Los_Angeles";
+  time.timeZone = "America/New_York";
 
   # tools
   environment.systemPackages = with pkgs; [
