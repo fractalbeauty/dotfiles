@@ -31,6 +31,7 @@
     qbittorrent
     mpv
     google-chrome
+    thunderbird
 
     # games
     lutris
