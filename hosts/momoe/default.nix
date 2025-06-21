@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware.nix
+    ../../nixos/android.nix
     ../../nixos/battery.nix
     ../../nixos/bluetooth.nix
     ../../nixos/common.nix
