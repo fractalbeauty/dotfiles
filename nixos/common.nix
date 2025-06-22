@@ -14,5 +14,11 @@
   # zsh
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
+  # nix garbage collection
+  nix.gc = {
+    automatic = true;
+    options = "--delete-older-than 30d";
+  };
 }
 
