@@ -32,6 +32,7 @@
     mpv
     google-chrome
     thunderbird
+    jetbrains.idea-community-bin
 
     # games
     lutris
