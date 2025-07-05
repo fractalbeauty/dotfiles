@@ -13,6 +13,7 @@
     powertop
     unzip
     tokei
+    dig
   ];
 
   programs.git = {
