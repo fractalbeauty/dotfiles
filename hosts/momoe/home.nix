@@ -33,6 +33,7 @@
     google-chrome
     thunderbird
     jetbrains.idea-community-bin
+    nemo
 
     # games
     lutris

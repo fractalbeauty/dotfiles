@@ -108,6 +108,9 @@
   # xdg-desktop-portal
   environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
 
+  # gvfs for nemo
+  services.gvfs.enable = true;
+
   # nixos state version
   system.stateVersion = "24.05";
 }
