@@ -14,6 +14,7 @@
     unzip
     tokei
     dig
+    nh
   ];
 
   programs.git = {
