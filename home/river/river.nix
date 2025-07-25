@@ -54,7 +54,6 @@ in {
         "'swayidle timeout 300 \"${lockCommand}\"'"
         "sway-audio-idle-inhibit"
         "'foot --server'"
-        "wpaperd"
         "fcitx5"
       ];
     };
