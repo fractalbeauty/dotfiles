@@ -15,6 +15,7 @@
     ../../home/zsh.nix
     ../../home/nvim.nix
     ../../home/utils.nix
+    ../../home/emacs.nix
   ];
 
   home.packages = with pkgs; [
