@@ -5,6 +5,9 @@
     # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # nixpkgs master
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
+
     # home-manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -29,14 +32,20 @@
 
   outputs = inputs@{ nixpkgs, home-manager, nixos-wsl, stylix, nixvim, ... }:
     let
+      masterOverlay = final: prev: {
+        inherit (inputs.nixpkgs-master.legacyPackages.${prev.system}) jetbrains;
+      };
+
       mkSystem = name: cfg: nixpkgs.lib.nixosSystem rec {
         system = cfg.system or "x86_64-linux";
+        
         #specialArgs = inputs;
         modules = [
           ./nixos/lemurs.nix
 
           ({ ... }: {
             nixpkgs.config.allowUnfree = true;
+            nixpkgs.overlays = [ masterOverlay ];
           })
 
           # shared configuration for all hosts
