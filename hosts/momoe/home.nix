@@ -23,6 +23,7 @@
     noto-fonts
     noto-fonts-cjk-sans
     nerd-fonts.inconsolata
+    julia-mono
 
     # apps
     nomachine-client
@@ -39,6 +40,8 @@
     # games
     lutris
   ];
+
+  fonts.fontconfig.enable = true;
 
   programs.zathura.enable = true;
 
