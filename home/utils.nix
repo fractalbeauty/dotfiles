@@ -15,6 +15,7 @@
     tokei
     dig
     nh
+    nixfmt-rfc-style
   ];
 
   programs.git = {
