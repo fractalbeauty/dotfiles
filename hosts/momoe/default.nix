@@ -6,6 +6,7 @@
     ../../nixos/android.nix
     ../../nixos/battery.nix
     ../../nixos/bluetooth.nix
+    ../../nixos/conveyor
     ../../nixos/common.nix
     ../../nixos/gaming.nix
     ../../nixos/ime.nix
