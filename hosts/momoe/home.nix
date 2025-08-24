@@ -36,6 +36,7 @@
     thunderbird
     jetbrains.idea-community-bin
     nemo
+    imhex
 
     # games
     lutris
