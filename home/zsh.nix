@@ -8,7 +8,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      #
+      osup = "( cd ~/dotfiles && nh os switch . )";
     };
 
     oh-my-zsh = {
