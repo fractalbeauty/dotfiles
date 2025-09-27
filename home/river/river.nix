@@ -1,18 +1,20 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, ... }:
 
 let
   colors = config.lib.stylix.colors;
   lockCommand = "waylock -fork-on-lock -ignore-empty-password -init-color 0x${colors.base00} -input-color 0x${colors.base0D} -fail-color 0x${colors.base08}";
 in {
-  home.packages = with pkgs; [
-    swayidle
-    sway-audio-idle-inhibit
-    waylock
-    brightnessctl
-    wl-clipboard
-    pamixer
-    wayshot
-    slurp
+  home.packages = [
+    pkgs.swayidle
+    pkgs.sway-audio-idle-inhibit
+    pkgs.waylock
+    pkgs.brightnessctl
+    pkgs.wl-clipboard
+    pkgs.pamixer
+    pkgs.wayshot
+    pkgs.slurp
+
+    inputs.quickshell.packages.${pkgs.system}.default
   ];
 
   wayland.windowManager.river = {
