@@ -1,0 +1,31 @@
+#!/bin/sh
+
+SHELLS_PATH="$HOME/dotfiles/shells"
+SHELLS=($(find "$SHELLS_PATH" -mindepth 1 -maxdepth 1 -type d -exec basename {} \;))
+
+if [ -z "$1" ]; then
+    echo "Usage: useshell <shell>"
+    echo "Available shells:"
+    printf '  %s\n' "${SHELLS[@]}"
+    exit 1
+fi
+
+SHELL="$1"
+SHELL_PATH="$SHELLS_PATH/$SHELL"
+
+if [ ! -d "$SHELL_PATH" ]; then
+	echo "Error: shell '$SHELL' does not exist"
+    echo "Available shells:"
+    printf '  %s\n' "${SHELLS[@]}"
+    exit 1
+fi
+
+if [ ! -f ".envrc" ]; then
+    echo "use flake ${SHELL_PATH}" > ".envrc"
+    echo "Created .envrc with 'use flake ${SHELL_PATH}'"
+
+	direnv allow
+else
+    echo "Error: .envrc already exists"
+fi
+

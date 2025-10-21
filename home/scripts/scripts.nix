@@ -11,9 +11,16 @@
     };
   };
 
+  home.sessionPath = [ "$HOME/scripts" ];
+
   home.file."scripts/sysact" = {
     enable = true;
     executable = true;
     source = ./sysact;
+  };
+  home.file."scripts/useshell" = {
+    enable = true;
+    executable = true;
+    source = ./useshell;
   };
 }
