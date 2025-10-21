@@ -37,6 +37,7 @@
     jetbrains.idea-community-bin
     nemo
     imhex
+    nicotine-plus
 
     # games
     lutris
