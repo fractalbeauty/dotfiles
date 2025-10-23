@@ -16,6 +16,7 @@
     dig
     nh
     nixfmt-rfc-style
+    rclone
   ];
 
   programs.git = {
