@@ -9,6 +9,7 @@
     ../../home/vscode.nix
     ../../home/senpai.nix
     ../../home/obs-studio.nix
+    ../../home/hyprland/hyprland.nix
 
     ../../home/scripts/scripts.nix
 
