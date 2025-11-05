@@ -9,6 +9,7 @@
     ../../nixos/conveyor
     ../../nixos/common.nix
     ../../nixos/gaming.nix
+    ../../nixos/hyprland.nix
     ../../nixos/ime.nix
     ../../nixos/podman.nix
     ../../nixos/tailscale.nix
@@ -51,9 +52,6 @@
   environment.systemPackages = with pkgs; [
     dconf
     config.boot.kernelPackages.perf
-
-    # for hyprland. TODO: should be in a module maybe
-    kitty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -114,10 +112,6 @@
 
   # gvfs for nemo
   services.gvfs.enable = true;
-
-  # hyprland temp
-  # TODO: should be in a module
-  programs.hyprland.enable = true;
 
   # nixos state version
   system.stateVersion = "24.05";
