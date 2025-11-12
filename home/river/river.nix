@@ -13,6 +13,7 @@ in {
     pamixer
     wayshot
     slurp
+    river-filtile
   ];
 
   wayland.windowManager.river = {
@@ -25,6 +26,9 @@ in {
 
       map = {
         normal = {
+          # toggle monocle mode
+          "Super M" = "send-layout-cmd filtile monocle";
+
           # run menu
           "Super R" = "spawn 'fuzzel -p Run:\\ '";
           # cliphist menu
