@@ -9,6 +9,7 @@
 
     shellAliases = {
       osup = "( cd ~/dotfiles && nh os switch . )";
+      try = "nix-shell --command $0 -p";
     };
 
     oh-my-zsh = {
