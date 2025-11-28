@@ -6,6 +6,5 @@
 
   # adb
   programs.adb.enable = true;
-  users.users.hazel.extraGroups = ["adbusers"];
 }
 
