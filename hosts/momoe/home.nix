@@ -51,13 +51,13 @@
   services.wpaperd.enable = true;
 
   stylix.enable = true;
-  stylix.image = ../../home/wallpapers/pier.png;
+  stylix.image = ../../home/wallpapers/green.jpg;
   stylix.imageScalingMode = "fill";
   stylix.polarity = "dark";
   #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-forest-light.yaml";
-  #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
   #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/oxocarbon-dark.yaml";
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/ashes.yaml";
+  # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/ashes.yaml";
   stylix.fonts = {
     monospace = {
       package = pkgs.nerd-fonts.inconsolata;
