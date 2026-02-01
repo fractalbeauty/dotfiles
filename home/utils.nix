@@ -15,7 +15,7 @@
     tokei
     dig
     nh
-    nixfmt-rfc-style
+    nixfmt
     rclone
   ];
 
@@ -23,15 +23,16 @@
     enable = true;
     lfs.enable = true;
     
-    userName = "hazel";
-    userEmail = "hazel@meows.zip";
-    
-    extraConfig = {
+    settings = {
+      user = {
+        name = "hazel";
+        email = "hazel@meows.zip";
+      };
       init.defaultbranch = "main";
       pull.rebase = true;
       push.autosetupremote = true;
     };
-
+    
     ignores = [
       ".direnv/"
     ];

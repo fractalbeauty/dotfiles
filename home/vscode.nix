@@ -1,7 +1,7 @@
 { pkgs, inputs, lib, config, ... }:
 
 let
-  exts = inputs.nix-vscode-extensions.extensions.${pkgs.system};
+  exts = inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system};
 
   # TODO: this seems kinda brittle
   vscodeCfg = config.programs.vscode;
