@@ -32,8 +32,11 @@
 
   outputs = inputs@{ nixpkgs, home-manager, nixos-wsl, stylix, nixvim, ... }:
     let
+      # Overlay to use packages from nixpkgs-master
+      # Add to list of inherited packages, ex: inherit (...) X Y Z;
+      # (currently nothing)
       masterOverlay = final: prev: {
-        inherit (inputs.nixpkgs-master.legacyPackages.${prev.system}) jetbrains;
+        inherit (inputs.nixpkgs-master.legacyPackages.${prev.system});
       };
 
       mkSystem = name: cfg: nixpkgs.lib.nixosSystem rec {

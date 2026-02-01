@@ -35,7 +35,7 @@
     mpv
     google-chrome
     thunderbird
-    jetbrains.idea-community-bin
+    jetbrains.idea
     nemo
     imhex
     nicotine-plus
