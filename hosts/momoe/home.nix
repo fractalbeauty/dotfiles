@@ -39,6 +39,7 @@
     nemo
     imhex
     nicotine-plus
+    discord
 
     # games
     lutris
