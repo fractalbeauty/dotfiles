@@ -12,6 +12,7 @@
     ../../nixos/hyprland.nix
     ../../nixos/ime.nix
     ../../nixos/keyboard.nix
+    ../../nixos/llm-agents.nix
     ../../nixos/podman.nix
     ../../nixos/tailscale.nix
   ];

@@ -27,6 +27,10 @@
     # nix-vscode-extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
+
+    # llm-agents
+    llm-agents.url = "github:numtide/llm-agents.nix";
+    llm-agents.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nixos-wsl, stylix, nixvim, ... }:
@@ -41,7 +45,8 @@
       mkSystem = name: cfg: nixpkgs.lib.nixosSystem rec {
         system = cfg.system or "x86_64-linux";
         
-        #specialArgs = inputs;
+        specialArgs = { inherit inputs; };
+
         modules = [
           ./nixos/lemurs.nix
 
@@ -62,7 +67,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.extraSpecialArgs = specialArgs;
             home-manager.users.hazel.imports = [
               {
                 programs.home-manager.enable = true;
