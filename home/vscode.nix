@@ -44,6 +44,8 @@ in {
           "**/.direnv/**" = true;
         };
 
+        "editor.rename.enablePreview" = false;
+
         "github.copilot.nextEditSuggestions.enabled" = true;
 
         "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css]" = {
