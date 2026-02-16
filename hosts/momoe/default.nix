@@ -11,6 +11,7 @@
     ../../nixos/gaming.nix
     ../../nixos/hyprland.nix
     ../../nixos/ime.nix
+    ../../nixos/keyboard.nix
     ../../nixos/podman.nix
     ../../nixos/tailscale.nix
   ];
