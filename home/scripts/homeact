@@ -1,0 +1,16 @@
+#!/bin/sh
+
+HA_SCENE_URL="http://192.168.0.18:8123/api/services/scene/turn_on"
+HA_LIGHT_URL="http://192.168.0.18:8123/api/services/light/turn_on"
+HA_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzNGE5NmNhMmY0MzU0MzE2ODZlOTg1NTNlOWY4ZDY2NSIsImlhdCI6MTc3MTI5Mjg2MywiZXhwIjoyMDg2NjUyODYzfQ.xCP66eI2nk_D4jl1xsqFEj1I7sc1VxLPb3OOWBqhVCs"
+
+case "$(printf "lights daytime\nlights out\nlights sky\nlights warmer\nbrightness 33\nbrightness 66\nbrightness 100" | fuzzel -d -p 'Action: ' --match-mode fuzzy)" in
+	'lights daytime') curl -s "$HA_SCENE_URL" -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"entity_id": "scene.lights_daytime","transition": 2}' ;;
+	'lights out') curl -s "$HA_SCENE_URL" -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"entity_id": "scene.lights_out","transition": 2}' ;;
+	'lights sky') curl -s "$HA_SCENE_URL" -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"entity_id": "scene.lights_sky","transition": 2}' ;;
+	'lights warmer') curl -s "$HA_SCENE_URL" -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"entity_id": "scene.lights_warmer","transition": 2}' ;;
+	'brightness 33') curl -s "$HA_LIGHT_URL" -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"entity_id": "light.livingroomlights","brightness_pct": 33,"transition": 2}' ;;
+	'brightness 66') curl -s "$HA_LIGHT_URL" -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"entity_id": "light.livingroomlights","brightness_pct": 66,"transition": 2}' ;;
+	'brightness 100') curl -s "$HA_LIGHT_URL" -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"entity_id": "light.livingroomlights","brightness_pct": 100,"transition": 2}' ;;
+	*) exit 1 ;;
+esac

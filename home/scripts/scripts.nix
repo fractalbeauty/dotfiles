@@ -13,6 +13,11 @@
 
   home.sessionPath = [ "$HOME/scripts" ];
 
+  home.file."scripts/homeact" = {
+    enable = true;
+    executable = true;
+    source = ./homeact;
+  };
   home.file."scripts/sysact" = {
     enable = true;
     executable = true;
