@@ -86,5 +86,31 @@
     serif = [ "Noto Serif" ];
   };
 
+  services.kanshi = {
+    enable = true;
+    profiles = {
+      default = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+          }
+        ];
+      };
+      desk = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+            position = "320,1440";
+          }
+          {
+            criteria = "HDMI-A-1";
+            scale = 1.5;
+            position = "0,0";
+          }
+        ];
+      };
+    };
+  };
+
   home.stateVersion = "24.05";
 }
