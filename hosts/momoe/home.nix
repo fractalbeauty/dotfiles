@@ -40,6 +40,7 @@
     imhex
     nicotine-plus
     discord
+    dino
 
     # games
     lutris
