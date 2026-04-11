@@ -31,6 +31,7 @@
       init.defaultbranch = "main";
       pull.rebase = true;
       push.autosetupremote = true;
+      rebase.autostash = true;
     };
     
     ignores = [
