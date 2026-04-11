@@ -4,7 +4,8 @@
   imports = [
     ./hardware.nix
     ../../nixos/android.nix
-    ../../nixos/battery.nix
+    # TODO: conflicts with gnome somewhere
+    #../../nixos/battery.nix
     ../../nixos/bluetooth.nix
     ../../nixos/conveyor
     ../../nixos/common.nix
@@ -15,6 +16,7 @@
     ../../nixos/llm-agents.nix
     ../../nixos/podman.nix
     ../../nixos/tailscale.nix
+    ../../nixos/gnome.nix
   ];
 
   # systemd-boot
