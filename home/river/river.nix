@@ -36,9 +36,14 @@ in {
           # launch programs
           "Super+Shift Return" = "spawn footclient";
           "Super+Shift F" = "spawn firefox";
-          "Super+Shift L" = "spawn '${lockCommand}'";
+          "Super+Shift D" = "spawn discord";
+          "Super+Shift A" = "spawn signal-desktop";
+          "Super+Shift S" = "spawn 'footclient senpai'";
+          "Super+Shift X" = "spawn dino";
           "Super+Shift P" = "spawn ~/scripts/sysact";
           "Super+Shift H" = "spawn ~/scripts/homeact";
+          # lock
+          "Super+Shift L" = "spawn '${lockCommand}'";
           # brightness
           "Super+Control Up" = "spawn 'brightnessctl set 10%+'";
           "Super+Control Down" = "spawn 'brightnessctl set 10%-'";
