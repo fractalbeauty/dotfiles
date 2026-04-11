@@ -17,6 +17,7 @@
     nh
     nixfmt
     rclone
+    fzf
   ];
 
   programs.git = {
