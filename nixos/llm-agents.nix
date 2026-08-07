@@ -6,5 +6,6 @@ in {
   environment.systemPackages = [
     llmAgents.claude-code
     llmAgents.claudebox
+    llmAgents.opencode
   ];
 }
