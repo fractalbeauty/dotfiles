@@ -18,6 +18,7 @@
     nixfmt
     rclone
     fzf
+    ripgrep
   ];
 
   programs.git = {
