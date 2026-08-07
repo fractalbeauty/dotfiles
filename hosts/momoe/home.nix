@@ -50,10 +50,10 @@
 
   programs.zathura.enable = true;
 
-  services.wpaperd.enable = true;
+  #services.wpaperd.enable = true;
 
   stylix.enable = true;
-  stylix.image = ../../home/wallpapers/green.jpg;
+  #stylix.image = ../../home/wallpapers/green.jpg;
   stylix.imageScalingMode = "fill";
   stylix.polarity = "dark";
   #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-forest-light.yaml";
