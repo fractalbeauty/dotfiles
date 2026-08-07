@@ -17,6 +17,7 @@
     ../../nixos/podman.nix
     ../../nixos/tailscale.nix
     ../../nixos/gnome.nix
+    ../../nixos/musicopy
   ];
 
   # systemd-boot
